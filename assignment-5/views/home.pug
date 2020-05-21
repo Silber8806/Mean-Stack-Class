@@ -1,0 +1,26 @@
+extends ./layout.pug
+
+block header_content
+	h1 TasKitty
+
+block content
+	if (task_info.length)
+		table#task_list.table-striped.table-dark
+			thead
+				th(scope="col") Task Name
+				th(scope="col") Task Description
+				th(scope="col") Due Date
+				th.delete_col(scope="col") delete?
+			tbody
+			for task in task_info
+				tr
+					th(scope="row") 
+						a(href='/tasks/' + task.id) #{task.name}
+					td #{task.description}
+					td #{moment(task.dueAt).format("YYYY-MM-DD")}
+					td.delete_col 
+						form(action='/delete-task',method='post')
+							input(type='hidden',name='id',value=task.id)
+							input(type='image',src='/public/images/x.png')
+	else
+		h2 no tasks found!

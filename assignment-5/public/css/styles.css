@@ -1,0 +1,83 @@
+/* 
+	side bar -> bar for adding tasks and looking at old ones
+	header -> info about current page
+	footer -> placeholder for footer
+ */
+header {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin: auto; }
+
+header:hover {
+  color: tan; }
+
+main {
+  margin-left: 160px;
+  padding-top: 100px;
+  text-align: center;
+  min-height: calc(100vh - 70px); }
+
+.delete_col {
+  text-align: center; }
+
+input[type="image"] {
+  width: 25px;
+  height: 25px; }
+
+table#task_list {
+  width: 100%; }
+  table#task_list th {
+    padding: 10px; }
+  table#task_list td {
+    padding: 10px; }
+
+.sidenav {
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 10%;
+  left: 1px;
+  background-color: #111;
+  border-radius: 5px; }
+  .sidenav p {
+    color: white;
+    text-align: center;
+    margin-top: 10px; }
+  .sidenav a p:hover {
+    color: tan; }
+  .sidenav a:hover {
+    text-decoration: none; }
+  .sidenav form {
+    color: #ffffff;
+    padding: 0px 10px 10px;
+    margin: auto;
+    border: 1px white; }
+
+#update_task_form {
+  width: 50%;
+  margin: 0% 25%;
+  border-radius: 5px;
+  border: 2px solid silver; }
+  #update_task_form input {
+    padding: 10px; }
+
+input[type="submit"] {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 25%;
+  margin-right: 25%; }
+
+footer {
+  height: 69px;
+  display: block;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 100%; }
+  footer .container {
+    text-align: center;
+    padding: 0px 10px; }

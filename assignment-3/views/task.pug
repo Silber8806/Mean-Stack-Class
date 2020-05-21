@@ -1,0 +1,16 @@
+extends ./layout.pug
+
+block header_content
+	h1 TasKitty - Task - #{task.id} - #{task.name}
+
+block content
+	h2 Current Task
+	p this lists your current task:
+	h3 Name
+	p #{task.name}
+	h3 Description
+	p #{task.description}
+	h3 Due Date
+	p #{task.date}
+	a(href='/')
+		h4 Go back to all tasks?

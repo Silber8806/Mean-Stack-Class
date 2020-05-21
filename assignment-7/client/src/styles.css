@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+main {
+	margin-left: 160px;
+	padding-top: 100px;
+	text-align: center;
+	min-height: calc(100vh - 70px); 
+}
+
+body {
+	background-color: WhiteSmoke;
+}

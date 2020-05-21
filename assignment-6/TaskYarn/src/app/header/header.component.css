@@ -1,0 +1,14 @@
+/* styling for like the navbar */
+
+header {
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	background-color: black;
+	color: white;
+	margin: auto;
+}
+
+header:hover {
+	color: tan; 
+}

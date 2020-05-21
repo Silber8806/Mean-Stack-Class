@@ -1,0 +1,29 @@
+<!--This is the main content page..-->
+
+<div class="container">
+	<main> 
+		<div *ngIf="taskList.length != 0; else noContent ">
+
+			<!--This is a table containing tasks..-->
+
+			<table id="task_list" class="table-striped table-dark">
+				<thead>
+					<th scope="col"> Task name </th>
+					<th scope="col"> Task Description </th>
+					<th scope="col"> Due Date </th>
+					<th scope="col" class="delete_col"> delete? </th>
+				</thead>
+				<tbody>
+					<!--Each task generated here..-->
+					<tr app-task *ngFor="let taskObject of taskList" 
+					[task]="taskObject">
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- no tasks found template..-->
+		<ng-template #noContent> 
+			<h2> no tasks found! </h2>
+		</ng-template>
+	</main>
+</div>

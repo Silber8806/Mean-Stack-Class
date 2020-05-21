@@ -1,0 +1,21 @@
+/* styling for like the navbar */
+
+header {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  margin: auto; 
+}
+
+header h1 {
+	color: white;
+}
+
+header h1:hover {
+	color: tan;
+}
+
+header a:hover {
+	text-decoration: none;
+}

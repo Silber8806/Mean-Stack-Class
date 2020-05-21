@@ -1,0 +1,23 @@
+/* styling for main canvas page */
+
+main {
+	margin-left: 160px;
+	padding-top: 100px;
+	text-align: center;
+	min-height: calc(100vh - 70px); 
+}
+
+/* styling for the task table */
+
+table#task_list {
+  width: 100%; 
+}
+ 
+ table#task_list th {
+    padding: 10px; 
+}
+
+table#task_list td {
+    padding: 10px; 
+}
+

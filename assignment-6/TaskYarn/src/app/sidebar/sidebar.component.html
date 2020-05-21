@@ -1,0 +1,22 @@
+<!--This is just a form that is disabled...-->
+
+<div class="sidenav">
+	<a href='/'>
+		<p> All Tasks </p>
+	</a>
+	<form id="add_task_form" action='/new-task' method='post'>
+		<div class="form-group">
+			<label for="name"> Task name </label>
+			<input class="form-control" type="text" name="name" required>
+		</div>
+		<div class="form-group">
+			<label for="description"> Description </label>
+			<input class="form-control" type="text" name="description" required>
+		</div>
+		<div class="form-group">
+			<label for="date"> Date Due </label>
+			<input class="form-control" type="date" name="date" required>
+		</div>
+		<input class="btn btn-primary" type="submit" value="Add Task" disabled>
+	</form>
+</div>

@@ -1,0 +1,56 @@
+
+<!-- header component -->
+<app-header sitename="{{ title }}"></app-header>
+
+<!-- sidebar component --> 
+<app-sidebar></app-sidebar>
+
+<div class="container">
+	<main> 
+		<!-- Form for task, prefilled... -->
+		<div *ngIf="task; else noContent ">
+			<form id="update_task_form" #form="ngForm">
+				<input type="hidden" name="id" [(ngModel)]="task._id">
+				<!-- task name -->
+				<div class="from-group">
+					<label for="name"> Task Name </label>
+					<input required minlength="3" class="form-control" name="name" #name="ngModel" [(ngModel)]="task.name">
+				</div>
+				<div *ngIf="name.invalid" class="alert alert-danger">
+					<div *ngIf="name.errors.minlength">
+						 Name minlength 3.
+					</div>
+					<div *ngIf="name.errors.required">
+						 Name required.
+					</div>
+				</div>
+				<!-- task description -->
+				<div class="from-group">
+					<label for="description"> Description </label>
+					<input required #description="ngModel" class="form-control" name="description" [(ngModel)]="task.description">
+				</div>
+				<div *ngIf="description.invalid" class="alert alert-danger">
+					Description required.
+				</div>
+				<!-- task due date -->
+				<div class="from-group">
+					<label for="date"> Due At </label>
+					<input required class="form-control" #date="ngModel"  type="date" name="date" [(ngModel)]="task.date">
+				</div>
+				<div *ngIf="date.invalid" class="alert alert-danger">
+					Date required.
+				</div>
+				<!-- create, update and delete task in that order -->
+				<button class="btn btn-primary" (click)="createTask()" [disabled]="!form.valid"> Create </button>
+				<button class="btn btn-secondary" (click)="updateTask()" [disabled]="!form.valid"> Update </button>
+				<button class="btn btn-danger" (click)="deleteTask(form.value.id)"> Delete </button>
+			</form>
+		</div>
+		<ng-template #noContent> 
+			 <h2> No tasks found! <a routerLink="/"> See other tasks! </a> </h2> 
+		</ng-template>
+	</main>
+</div>
+
+<!-- footer component -->
+<app-footer></app-footer>

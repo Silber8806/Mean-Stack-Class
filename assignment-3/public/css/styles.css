@@ -1,0 +1,75 @@
+/* 
+	side bar -> bar for adding tasks and looking at old ones
+	header -> info about current page
+	footer -> placeholder for footer
+ */
+.sidenav {
+  width: 200px;
+  position: fixed; 
+  z-index: 1;
+  top: 25%; 
+  left: 1px;
+  background-color: #111;
+}
+
+.sidenav p {
+	color: white;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.sidenav a:hover {
+	text-decoration: none;
+}
+
+.sidenav a p:hover {
+	color: tan;
+}
+
+form {
+	color: #ffffff;
+	padding: 0px 10px 10px;
+	margin: auto;
+}
+
+header {
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	background-color: black;
+	color: white;
+}
+
+header:hover {
+	color: tan;
+}
+
+input[type="submit"] {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+main {
+  margin-left: 160px; 
+  padding-top: 100px;
+  text-align: center;
+  min-height: calc(100vh - 70px);
+  top-padding: 50px;
+}
+
+footer {
+  height: 69px;
+  display: block;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 100%; 
+}
+
+footer .container {
+	text-align: center;
+	padding: 0px 10px;
+}

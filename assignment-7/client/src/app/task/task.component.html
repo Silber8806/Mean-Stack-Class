@@ -1,0 +1,15 @@
+
+<!-- router link to task page with task name -->
+<th scope="row">
+	<a routerLink="/tasks/{{ task._id }}"> {{ task.name }} </a>
+</th>
+
+<!-- task description -->
+<td> {{ task.description }} </td>
+
+<!-- task due date -->
+<td> {{ task.dueAt }} </td>
+<td class="delete_col">  
+	<!-- click here to delete task -->
+	<a href="#" (click)="deleteTask(task._id)" > <img src="/assets/images/x.png"> </a>
+</td>

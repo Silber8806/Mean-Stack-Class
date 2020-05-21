@@ -1,0 +1,14 @@
+/* styling for the task table */
+
+table#task_list {
+  width: 100%; 
+}
+ 
+ table#task_list th {
+    padding: 10px; 
+}
+
+table#task_list td {
+    padding: 10px; 
+}
+

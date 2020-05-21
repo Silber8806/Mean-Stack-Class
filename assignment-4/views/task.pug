@@ -1,0 +1,24 @@
+extends ./layout.pug
+
+block header_content
+	h1 TasKitty - Task - #{task.name}
+
+block content
+	form#update_task_form(method='post')
+		input(type="hidden",name="id",value=task.id)
+		.from-group
+			label(for="name") Task Name
+			input.form-control(type='text',name='name', value=task.name ,required)
+		.from-group
+			label(for="description") Description
+			input.form-control(type='text',name='description', value=task.description,required)
+		.from-group
+			label(for="date") Date Due
+			input.form-control(type='date',name='date', value=moment(task.dueAt).utc().format("YYYY-MM-DD"),required,min=moment().utc().format("YYYY-MM-DD"))
+		.row
+			.col
+				input.btn.btn-primary(type="submit", formaction='/new-task', name="action", value="Create")
+			.col
+				input.btn.btn-secondary(type="submit", formaction='/update-task', name="action", value="Update")
+			.col
+				input.btn.btn-danger.delete_task(type="submit", formaction='/delete-task', name="action", value="delete")

@@ -1,0 +1,36 @@
+{
+  "name": "worktracker",
+  "version": "1.0.0",
+  "description": "tracks your work",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "start-dev": "nodemon --inspect ./bin/www",
+    "compile-css": "node-sass --include-path sass ./public/scss/styles.css ./public/css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarvardDCENode/assignment-3-Silber8806.git"
+  },
+  "author": "Chris Kottmyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarvardDCENode/assignment-3-Silber8806/issues"
+  },
+  "homepage": "https://github.com/HarvardDCENode/assignment-3-Silber8806#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.5",
+    "morgan": "^1.10.0",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7",
+    "pug": "^2.0.4"
+  }
+}

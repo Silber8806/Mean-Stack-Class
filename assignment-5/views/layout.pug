@@ -1,0 +1,30 @@
+html
+	head
+		title TasKitty
+	block scripts
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+		link(href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', rel='stylesheet' crossorigin="anonymous")
+		script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6", crossorigin="anonymous")
+		link(href='/public/css/styles.css',rel='stylesheet')
+	body
+		block nav
+			include sidebar
+		a(href='/')
+			header
+				block header_content
+					.container
+		.container
+			main
+				block flash_messages
+					if flash_errs 
+						for msg in flash_errs
+							.alert.alert-danger.msg #{msg}
+					if flash_info
+						for msg in flash_info
+							.alert.alert-info.msg #{msg}
+				block content
+		footer
+			block footer_content
+				.container
+					p TasKitty makes tracking tasks easy!
+

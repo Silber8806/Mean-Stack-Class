@@ -1,0 +1,43 @@
+/* Sidebar formatting */
+
+
+.sidenav {
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 10%;
+  left: 1px;
+  background-color: #111;
+  border-radius: 5px; 
+}
+
+.sidenav p {
+  color: white;
+  text-align: center;
+  margin-top: 10px; 
+}
+
+.sidenav a p:hover {
+  color: tan; 
+}
+
+.sidenav a:hover {
+  text-decoration: none; 
+}
+
+.sidenav form {
+  color: #ffffff;
+  padding: 0px 10px 10px;
+  margin: auto;
+  border: 1px white; 
+}
+
+/* Submit button */
+
+button[type="submit"] {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 25%;
+  margin-right: 25%; 
+}

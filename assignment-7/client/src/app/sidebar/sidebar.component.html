@@ -1,0 +1,43 @@
+<!--This is just a form that is disabled...-->
+
+<!-- Home page router -->
+<div class="sidenav">
+	<a routerLink="/">
+		<p> All Tasks </p>
+	</a>
+
+	<!-- Task form -->
+	<form #newtaskform="ngForm" id="add_task_form" (ngSubmit)="save(newtaskform)">
+		<!-- task name -->
+		<div class="form-group">
+			<label for="name"> Task name </label>
+			<input required minlength="3" class="form-control" name="name" #name="ngModel"  [(ngModel)]="task.name">
+		</div>
+		<div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+			<div *ngIf="name.errors.minlength">
+				 Name minlength 3.
+			</div>
+			<div *ngIf="name.errors.required">
+				 Name required.
+			</div>
+		</div>
+		<!-- task description -->
+		<div class="form-group">
+			<label for="description"> Description </label>
+			<input class="form-control" name="description" [(ngModel)]="task.description" #description="ngModel" required>
+		</div>
+		<div *ngIf="description.invalid && (description.dirty || description.touched)" class="alert alert-danger">
+			Description required.
+		</div>
+		<!-- task due date -->
+		<div class="form-group">
+			<label for="date"> Date Due </label>
+			<input class="form-control" type="date" name="date" [(ngModel)]="task.date"  #date="ngModel" required>
+		</div>
+		<div *ngIf="date.invalid && (date.dirty || date.touched)" class="alert alert-danger">
+			Date required.
+		</div>
+		<!-- submits only if form is valid, else disabled -->
+		<button type="submit" class="btn btn-primary" [disabled]="!newtaskform.valid"> Add Task</button>
+	</form>
+</div>

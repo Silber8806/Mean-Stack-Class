@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <title>TasKitty</title>
+   </head>
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+   <link href="../public/css/styles.css" rel="stylesheet"/>
+   <body>
+      <a href="/">
+         <header>
+            <h1>TasKitty - Task - Party Time!  TGIF!</h1>
+         </header>
+      </a>
+      <div class="container">
+         <main>
+            <form id="update_task_form">
+               <input type="hidden" name="id" value=""/>
+               <div class="from-group">
+                  <label for="name">Task Name</label>
+                  <input id="name-field" class="form-control" type="text" name="name" value="test 123" required="required" value="testing 123"/>
+               </div>
+               <div class="from-group">
+                  <label for="description">Description</label>
+                  <input id="description-field" class="form-control" type="text" name="description" value="test description 123" required="required"/>
+               </div>
+               <div class="from-group">
+                  <label for="date">Date Due</label>
+                  <input id="date-field" class="form-control" type="date" name="date" value="2020-01-02" required="required" min="2020-01-01"/>
+               </div>
+               <div class="row">
+                  <div class="col"><input class="btn btn-primary" type="submit" name="action" value="test apis" id="test"/></div>
+               </div>
+            </form>
+         </main>
+      <script type="text/javascript" src="js/test.js"></script>
+      </div>
+      <footer>
+         <div class="container">
+            <p>TasKitty makes tracking tasks easy!</p>
+         </div>
+      </footer>
+   </body>
+</html>

@@ -1,0 +1,14 @@
+.sidenav
+	a(href='/') 
+		p All Tasks
+	form#add_task_form(action='/new-task', method='post')
+		.form-group
+			label(for="name") Task name
+			input.form-control(type='text',name='name',required)
+		.form-group
+			label(for="description") Description
+			input.form-control(type='text',name='description',required)
+		.form-group
+			label(for="date") Date Due
+			input.form-control(type='date',name='date',required,min=moment().utc().format("YYYY-MM-DD"))
+		input.btn.btn-primary(type="submit", value="Add Task")

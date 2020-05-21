@@ -1,0 +1,50 @@
+html
+	head
+		title TasKitty
+	block scripts
+		link(href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', rel='stylesheet' crossorigin="anonymous")
+		script(href='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+		script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6", crossorigin="anonymous")
+		link(href='/public/css/styles.css',rel='stylesheet')
+	body
+		block nav
+			.sidenav
+				a(href='/') 
+					p see all tasks!
+				p add new task!
+				form(action='/new-task', method='post')
+					label(for="name") Task name
+					input#name(type='text',name='name',required)
+					label(for="description") Description
+					input#name(type='text',name='description',required)
+					label(for="date") Date Due
+					input#name(type='date',name='date',required)
+					input(type="submit", value="Submit")
+		a(href='/')
+			header
+				block header_content
+					.container
+		main
+			block content
+				block tasks
+					.container
+						if (task_info.length)
+							.row
+								.col Task ID
+								.col Task Name
+								.col Task Description
+								.col Due Date
+							for task in task_info
+								.row
+									.col #{task.id}
+									.col 
+										a(href='/tasks/' + task.id) #{task.name}
+									.col #{task.description}
+									.col #{task.date}
+						else
+							h2 no tasks found!
+		footer
+			block footer_content
+				.container
+					p TasKitty makes tracking tasks easy!
+

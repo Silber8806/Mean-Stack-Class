@@ -1,0 +1,37 @@
+test.js:108 Starting Tests for API!
+test.js:109 name field: test 123
+test.js:110 description field: test description 123
+test.js:111 date field: 2020-01-02
+test.js:17 TEST 1 of 5: Listing Tasks!
+test.js:93 Response {type: "cors", url: "http://localhost:8080/api/tasks", redirected: false, status: 200, ok: true, …}
+test.js:94 null
+test.js:20 Passed Test - List...
+test.js:21 (7) [{…}, {…}, {…}, {…}, {…}, {…}, {…}]
+test.js:22 Done!
+test.js:36 TEST 2 of 5: Creating Task!
+test.js:93 Response {type: "cors", url: "http://localhost:8080/api/tasks", redirected: false, status: 201, ok: true, …}
+test.js:94 {name: "test 123", description: "test description 123", date: "2020-01-02"}
+test.js:39 Passed Test - Create
+test.js:40 {_id: "5e90dee835cb413eb47351f6", name: "test 123", description: "test description 123", dueAt: "2020-01-02T00:00:00.000Z", __v: 0}
+test.js:41 Done!
+test.js:45 TEST 3 of 5: Find Task!
+test.js:93 Response {type: "cors", url: "http://localhost:8080/api/tasks/5e90dee835cb413eb47351f6", redirected: false, status: 200, ok: true, …}
+test.js:94 null
+test.js:48 Passed Test - Find Task
+test.js:49 {_id: "5e90dee835cb413eb47351f6", name: "test 123", description: "test description 123", dueAt: "2020-01-02T00:00:00.000Z", __v: 0}
+test.js:50 Done!
+test.js:53 found and created task are equal
+test.js:54 passed secondary test...
+test.js:57 TEST 4 of 5: Update Task!
+test.js:59 test 123 updated by test
+test.js:93 Response {type: "cors", url: "http://localhost:8080/api/tasks/5e90dee835cb413eb47351f6", redirected: false, status: 200, ok: true, …}
+test.js:94 {name: "test 123 updated by test", description: "test description 123", date: "2020-01-02"}
+test.js:62 Passed Test - Update Task
+test.js:63 {_id: "5e90dee835cb413eb47351f6", name: "test 123 updated by test", description: "test description 123", dueAt: "2020-01-02T00:00:00.000Z", __v: 0}
+test.js:64 Done!
+test.js:93 Response {type: "cors", url: "http://localhost:8080/api/tasks/5e90dee835cb413eb47351f6", redirected: false, status: 200, ok: true, …}
+test.js:94 null
+test.js:68 TEST 5 of 5: Delete Task!
+test.js:69 {n: 1, opTime: {…}, electionId: "7fffffff000000000000003f", ok: 1, $clusterTime: {…}, …}
+test.js:70 Done!
+test.js:71 COMPLETED ALL 5 TESTS!
