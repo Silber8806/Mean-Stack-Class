@@ -18,6 +18,6 @@
   "homepage": "https://github.com/HarvardDCENode/assignment-2-Silber8806#readme",
   "dependencies": {
     "log-util": "^2.3.0",
-    "underscore": "^1.9.2"
+    "underscore": "^1.12.1"
   }
 }
